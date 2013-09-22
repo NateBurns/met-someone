@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Met At</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,6 +13,7 @@
   <tbody>
     <% @meetings.each do |meeting| %>
     <tr>
+      <td><%= meeting.created_at %></td>
       <td><%= link_to 'Show', meeting %></td>
       <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
       <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
